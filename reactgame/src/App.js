@@ -36,7 +36,7 @@ class App extends Component {
       //Nested if statement if user wins the game  
       } 
       if (this.state.score === 12) {
-        this.setState({score: 0, clickedCards: [], cards: cards})
+        this.setState({score: 0, highScore: 12, clickedCards: [], cards: cards})
       } 
     }
   }
@@ -55,7 +55,7 @@ class App extends Component {
 
     this.setState({cards:cards});
   }
-  
+
   //This function
   renderCards = (array) => {
     return this.state.cards.map(card => (
