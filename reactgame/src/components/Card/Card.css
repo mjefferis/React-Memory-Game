@@ -7,12 +7,18 @@
     border-width: 5px;
     width:150px;
     height:150px;  
+    vertical-align: middle;
+    display: inline-block;
+    float:none;
+   margin-left:50%;
+    
 }
 
 .thumbnail img {
     max-height: 100%;
     max-width: 100%;
-    display: table-cell;
-    vertical-align: middle;
+  
+  
 }
+
 

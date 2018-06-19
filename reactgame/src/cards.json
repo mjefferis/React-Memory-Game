@@ -2,12 +2,12 @@
     {
       "id": 1,
       "name": "Homer",
-      "image": "http://interactive.nydailynews.com/2016/05/simpsons-quiz/img/simp1.jpg"
+      "image": "https://pbs.twimg.com/profile_images/2119485351/Angry-homer_400x400.png"
     },
     {
       "id": 2,
       "name": "Bart",
-      "image": "https://regmedia.co.uk/2014/05/23/bart_simpson_teaser.jpg?x=442&y=293&crop=1"
+      "image": "http://2.bp.blogspot.com/-9fJqSSrYbcw/U58uuJu-h2I/AAAAAAAAA4k/MTDr_5sZR_s/s1600/BartSimpson16.gif"
     },
     {
       "id": 3,
@@ -42,7 +42,7 @@
     {
       "id": 9,
       "name": "Skinner",
-      "image": "https://pre00.deviantart.net/4074/th/pre/f/2011/036/1/0/seymour_skinner_01__simpsons_by_frasier_and_niles-d38uqak.jpg"
+      "image": "http://www.fanpop.com/images/polls/17520_2_full.jpg?v=1189474236"
     },
     {
       "id": 10,
@@ -52,11 +52,11 @@
     {
       "id": 11,
       "name": "Nelson",
-      "image": "https://www.myinstants.com/media/instants_images/nelson_2.jpg"
+      "image": "http://images1.fanpop.com/images/image_uploads/nelson-muntz-the-simpsons-nelson-muntz-sopt-1001987_500_550.gif"
     },
     {
       "id": 12,
       "name": "Burns",
-      "image": "https://bloximages.newyork1.vip.townnews.com/pilotonline.com/content/tncms/assets/v3/editorial/e/3f/e3f379b5-0ca6-5090-a3d3-c85e9dc85655/5760135f7d936.image.jpg"
+      "image": "https://c1.staticflickr.com/6/5735/24056228936_a2c9ef8ecf_b.jpg"
     }
   ]
