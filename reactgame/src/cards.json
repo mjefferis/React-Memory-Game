@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "name": "Homer",
+      "image": "http://interactive.nydailynews.com/2016/05/simpsons-quiz/img/simp1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Bart",
+      "image": "https://regmedia.co.uk/2014/05/23/bart_simpson_teaser.jpg?x=442&y=293&crop=1"
+    },
+    {
+      "id": 3,
+      "name": "Marge",
+      "image": "http://www.simpsoncrazy.com/content/pictures/marge/MargeSimpson2.gif"
+    },
+    {
+      "id": 4,
+      "name": "Lisa",
+      "image": "http://i.imgur.com/4LClmI1.png"
+    },
+    {
+      "id": 5,
+      "name": "Maggie",
+      "image": "https://static.simpsonswiki.com/images/thumb/4/45/Maggie_Simpson_Home_Alone.jpg/200px-Maggie_Simpson_Home_Alone.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Flanders",
+      "image": "http://images5.fanpop.com/image/photos/30700000/Ned-Flanders-ned-flanders-30746051-284-319.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Moe",
+      "image": "https://vignette.wikia.nocookie.net/simpsons/images/5/54/Imagemoe3.jpg/revision/latest/scale-to-width-down/185?cb=20130623173027"
+    },
+    {
+      "id": 8,
+      "name": "Ralphie",
+      "image": "http://laoblogger.com/images/ralph-wiggum-clipart-7.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Skinner",
+      "image": "https://pre00.deviantart.net/4074/th/pre/f/2011/036/1/0/seymour_skinner_01__simpsons_by_frasier_and_niles-d38uqak.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Otto",
+      "image": "https://alchetron.com/cdn/otto-mann-85c19536-59d9-44ac-97c0-15869f848b6-resize-750.png"
+    },
+    {
+      "id": 11,
+      "name": "Nelson",
+      "image": "https://www.myinstants.com/media/instants_images/nelson_2.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Burns",
+      "image": "https://bloximages.newyork1.vip.townnews.com/pilotonline.com/content/tncms/assets/v3/editorial/e/3f/e3f379b5-0ca6-5090-a3d3-c85e9dc85655/5760135f7d936.image.jpg"
+    }
+  ]

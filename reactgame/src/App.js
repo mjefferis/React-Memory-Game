@@ -1,24 +1,84 @@
 import React, { Component } from 'react';
-import Navbar from './components/Navbar/Navbar.js';
+import NavBar from './components/NavBar/NavBar.js';
 import Jumbotron from './components/Jumbotron/Jumbotron.js';
-import Card from './components/ClickCard/ClickCard.js';
+import Card from './components/Card/Card.js';
 import cards from './cards.json';
 
 import './index.css';
 
 class App extends Component {
+  state = {
+      cards: cards,
+      score: 0,
+      highScore: 0,
+      clickedCards: [],
+    }
+
+  clickedCard= (id) => {
+
+    //If statement which determines what happens if they picked an image they already picked
+    if (this.state.clickedCards.includes(id)) {
+
+      //Return score to 0 and empty clickedCards array
+      this.setState({score: 0, clickedCards: []})
+
+    } 
+
+    //Else statement that determines what happens if they picked an image they have not picked before
+    else {
+      this.setState({clickedCards: [this.state.clickedCards, id]})
+      this.setState({score: this.state.score + 1})
+
+      //Nested if statement that determines what happens if user gets a high score
+      if (this.state.score >= this.state.highScore) {
+        this.setState({highScore: this.state.score + 1})
+
+      //Nested if statement if user wins the game  
+      } 
+      if (this.state.score === 12) {
+        this.setState({score: 0, clickedCards: [], cards: cards})
+      } 
+    }
+  }
+
+  // Fisher-Yates Shuffle to randomize layout of cards
+  //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+  rearrangeCards = (array) => {
+    let currentIndex = array.length;
+    while (0 !== currentIndex) {
+      let randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      let temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    this.setState({cards:cards});
+  }
+  
+  //This function
+  renderCards = (array) => {
+    return this.state.cards.map(card => (
+      <section className='col-md-3' key={card.id} id={card.id}>
+        <Card
+          name={card.name} 
+          image={card.image} 
+          rearrangeCards={() => {this.rearrangeCards(this.state.cards)}}
+          clickedCard={() => {this.clickedCard(card.id)}}/>
+      </section>
+      )
+    )
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Jumbotron score={this.state.score} highScore={this.state.highScore}/>
+        <div className="container row cardWrap">
+        {this.renderCards(this.state.cards)}
       </div>
-    );
+      </div>
+    )
   }
 }
 
