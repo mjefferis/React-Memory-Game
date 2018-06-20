@@ -7,9 +7,10 @@ function handleClick(props) {
 }
 
 const Card = (props) => (
-    <div className="row">
+    <div >
       <a className="thumbnail" onClick={() => handleClick(props)}>
         <img src={props.image} />
+       
       </a>
  </div>
 )
