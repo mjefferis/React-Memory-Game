@@ -18,7 +18,7 @@ class App extends Component {
 
     //If statement which determines what happens if they picked an image they already picked
     if (this.state.clickedCards.includes(id)) {
-
+      alert('You picked that already!'); 
       //Return score to 0 and empty clickedCards array
       this.setState({score: 0, clickedCards: []})
 
@@ -26,7 +26,7 @@ class App extends Component {
 
     //Else statement that determines what happens if they picked an image they have not picked before
     else {
-      this.setState({clickedCards: [this.state.clickedCards, id]})
+      this.setState({clickedCards: [...this.state.clickedCards, id]})
       this.setState({score: this.state.score + 1})
 
       //Nested if statement that determines what happens if user gets a high score
@@ -35,8 +35,9 @@ class App extends Component {
 
       //Nested if statement if user wins the game  
       } 
-      if (this.state.score === 12) {
+      if (this.state.score === 11) {
         this.setState({score: 0, highScore: 12, clickedCards: [], cards: cards})
+        alert('You won');
       } 
     }
   }
@@ -57,11 +58,10 @@ class App extends Component {
   }
 
   //This function
-  renderCards = (array) => {
+  renderCards = () => {
     return this.state.cards.map(card => (
-      <section className='col-md-3' key={card.id} id={card.id}>
+      <section className='col-md-3' id={card.id}>
         <Card
-          name={card.name} 
           image={card.image} 
           rearrangeCards={() => {this.rearrangeCards(this.state.cards)}}
           clickedCard={() => {this.clickedCard(card.id)}}/>
@@ -74,7 +74,7 @@ class App extends Component {
     return (
       <div>
         <Jumbotron score={this.state.score} highScore={this.state.highScore}/>
-        <div className="container row cardWrap">
+        <div className="container row">
         {this.renderCards(this.state.cards)}
       </div>
       </div>
