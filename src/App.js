@@ -37,7 +37,7 @@ class App extends Component {
       } 
       if (this.state.score === 11) {
         this.setState({score: 0, highScore: 12, clickedCards: [], cards: cards})
-        alert('You won');
+        alert('You won!');
       } 
     }
   }

@@ -7,16 +7,19 @@
     border-width: 5px;
     width:150px;
     height:150px;  
-    float:right;
-  
-    
+    float:none;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .thumbnail img {
     max-height: 100%;
     max-width: 100%;
-  
 }
 
+.row {
+    margin-right: auto;
+    margin-left: auto;
+}
 
 
