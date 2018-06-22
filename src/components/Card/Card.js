@@ -1,20 +1,17 @@
 import React from 'react';
 import './Card.css';
 
-function handleClick(props) {
+function onClick (props) {
 	props.rearrangeCards();
-	props.clickedCard(props.id);
+	props.updateScore(props.id);
 }
 
 const Card = (props) => (
     <div >
-      <a className="thumbnail" onClick={() => handleClick(props)}>
+      <a className="thumbnail" onClick={() => onClick(props)}>
         <img src={props.image} />
-       
       </a>
  </div>
 )
-
-
 
 export default Card
