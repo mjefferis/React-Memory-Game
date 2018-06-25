@@ -7,7 +7,7 @@ function onClick (props) {
 }
 
 const Card = (props) => (
-    <div >
+    <div>
       <a className="thumbnail" onClick={() => onClick(props)}>
         <img src={props.image} />
       </a>

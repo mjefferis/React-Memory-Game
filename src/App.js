@@ -57,12 +57,12 @@ class App extends Component {
   //The rearrangeCards and updateScore are passed as props
   renderCards = () => {
     return this.state.cards.map(cardRender => (
-      <section className='col-md-3' id={cardRender.id}>
+      <div className='col-md-3' id={cardRender.id}>
         <Card
           image={cardRender.image}
           rearrangeCards={() => { this.rearrangeCards(this.state.cards) }}
           updateScore={() => { this.updateScore(cardRender.id) }} />
-      </section>
+      </div>
     )
     )
   }
