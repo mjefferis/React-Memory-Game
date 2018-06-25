@@ -53,9 +53,9 @@ class App extends Component {
     this.setState({ randomize: cards });
   }
 
-  //This function maps out our card array
-  //The rearrangeCards and updateScore are passed as props
-  renderCards = () => {
+  //This function displays the cards
+  //The rearrangeCards and updateScore methods are passed as props
+  displayCards = () => {
     return this.state.cards.map(cardRender => (
       <div className='col-md-3' id={cardRender.id}>
         <Card
@@ -73,7 +73,7 @@ class App extends Component {
       <div>
         <Jumbotron score={this.state.score} highScore={this.state.highScore} />
         <div className="container">
-          {this.renderCards(this.state.cards)}
+          {this.displayCards(this.state.cards)}
         </div>
       </div>
     )
