@@ -1,8 +1,8 @@
 import React from 'react';
 import './Card.css';
 
-function onClick (props) {
-	props.rearrangeCards();
+const onClick = (props) => {
+	props.randomCards();
 	props.updateScore(props.id);
 }
 

@@ -19,7 +19,6 @@ class App extends Component {
     //If statement which determines what happens if they picked an image they already picked
     if (this.state.clickedCards.includes(id)) {
       alert('You picked that character already!');
-      //Return score to 0 and empty clickedCards array
       this.setState({ score: 0, clickedCards: [] })
     }
 
@@ -41,7 +40,7 @@ class App extends Component {
 
   // Fisher-Yates Shuffle to randomize layout of cards
   //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
-  rearrangeCards = (array) => {
+  randomCards = (array) => {
     let currentIndex = array.length;
     while (0 !== currentIndex) {
       let randomIndex = Math.floor(Math.random() * currentIndex);
@@ -53,27 +52,20 @@ class App extends Component {
     this.setState({ randomize: cards });
   }
 
-  //This function displays the cards
-  //The rearrangeCards and updateScore methods are passed as props
-  displayCards = () => {
-    return this.state.cards.map(cardRender => (
-      <div className='col-md-3' id={cardRender.id}>
-        <Card
-          image={cardRender.image}
-          rearrangeCards={() => { this.rearrangeCards(this.state.cards) }}
-          updateScore={() => { this.updateScore(cardRender.id) }} />
-      </div>
-    )
-    )
-  }
-
   //Render the entire app
   render() {
     return (
       <div>
         <Jumbotron score={this.state.score} highScore={this.state.highScore} />
         <div className="container">
-          {this.displayCards(this.state.cards)}
+          {this.state.cards.map(cardRender => (
+            <div className='col-md-3' id={cardRender.id}>
+              <Card
+                image={cardRender.image}
+                randomCards={() => { this.randomCards(this.state.cards) }}
+                updateScore={() => { this.updateScore(cardRender.id) }} />
+            </div>
+          ))}
         </div>
       </div>
     )
