@@ -1,12 +1,13 @@
-## Simpsons Card Memory Game
-
-Personal Website
+# Simpsons Card Memory Game
 ![Screenshot](screenshot.png)
-=============
 ## About
-This is the repo for my personal website. The website hosts my portfolio and resume. Currently, I am working on making it look aesthetically pleasing on a phone sized browser. <a href="https://mjefferis.github.io/">Click here for the live webpage.</a>
-## Technologies Used: 
-Bootstrap 3/CSS/HTML <br/>
-Javascript/jQuery <br/>
-Firebase <br/>
+This is a memory game built with React.js. The user tries to pick as many different simpsons cards as they can without chosing the same character twice. <a href="https://pure-harbor-13590.herokuapp.com/">You can play the game here.</a>
+## Technologies Used
+<ul>
+  <li>React.js</li>
+  <li>Bootstrap</li>
+  <li>Heroku</li>
+</ul>
+## Future Improvements
+The most signifigant improvement I want to make is replacing the alerts with modals. Besides this, I would like to use media quaries to make the thumbnails smaller on a phone. I also think the styling in the header could be improved. 
 
